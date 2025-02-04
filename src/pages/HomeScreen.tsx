@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 
 const HomeScreen = () => {
     return (
-        <div>
+        <div className='flex flex-col min-h-screen w-full'>
             <h1>Zachary Cootes</h1>
+            <p className='text-green-500'>This is green text.</p>
             <div>
                 <button>
                     <Link to='/projects'>Projects</Link>
