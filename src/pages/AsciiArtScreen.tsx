@@ -1,7 +1,7 @@
 // src/App.js
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 
-export const AsciiArt = () => {
+const AsciiArtScreen = () => {
     const [file, setFile] = useState<File | null>(null)
     const [asciiArt, setAsciiArt] = useState('')
 
@@ -34,3 +34,5 @@ export const AsciiArt = () => {
         </div>
     )
 }
+
+export default AsciiArtScreen

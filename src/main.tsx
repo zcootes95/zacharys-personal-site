@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { ErrorBoundary } from 'react-error-boundary'
-import { ErrorScreen } from './pages/ErrorScreen.tsx'
+import ErrorScreen from './pages/system/ErrorScreen.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
