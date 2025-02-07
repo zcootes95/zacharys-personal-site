@@ -1,16 +1,18 @@
-import { ComponentType } from 'react'
-import { Outlet } from 'react-router-dom'
+import { ComponentType, useEffect, useState } from 'react'
+import { Link, Outlet } from 'react-router-dom'
+import { AppHeader } from './AppHeader'
+import { AppFooter } from './AppFooter'
 
 const AppLayout = () => {
     return (
-        <div>
-            <header className='bg-green-800 p-20 shadow-md'>
-                <h1 className='text-foreground'>Header SS111</h1>
-                <h3 className='text-red-500'>This is green text.</h3>
-            </header>
-            <main className='flex-1 p-4'>
-                <Outlet />
+        <div className='min-h-screen  flex flex-col'>
+            <AppHeader />
+            <main className='flex-grow'>
+                <div className='container mx-auto max-w-6xl px-4 py-8'>
+                    <Outlet />
+                </div>
             </main>
+            <AppFooter />
         </div>
     )
 }

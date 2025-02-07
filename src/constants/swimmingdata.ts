@@ -1,0 +1,126 @@
+export type SwimRaceData = {
+    date: string
+    time: string
+    meetName: string
+}
+
+export type SwimmingChartData = {
+    eventName: string
+    swims: SwimRaceData[]
+}
+
+export const butterflyDataOverTime: SwimmingChartData = {
+    eventName: '200 Meter Butterfly',
+    swims: [
+        { date: '02-17-2018', time: '1:47.73', meetName: 'Mountain Pacific Sports Federation Championships' },
+        { date: '02-17-2018', time: '1:49.19', meetName: 'Mountain Pacific Sports Federation Championships' },
+        { date: '01-27-2018', time: '1:51.21', meetName: 'UC Santa Barbara vs. Cal Poly' },
+        { date: '12-22-2017', time: '1:51.53', meetName: 'San Diego State vs. Air Force, Cal Poly' },
+        { date: '11-18-2017', time: '1:49.25', meetName: 'UNLV Invitational' },
+        { date: '11-18-2017', time: '1:49.89', meetName: 'UNLV Invitational' },
+        { date: '10-28-2017', time: '1:51.17', meetName: 'Cal Poly vs. UC Santa Barbara' },
+        { date: '09-30-2017', time: '1:51.00', meetName: 'USC vs. Cal Poly' },
+        { date: '02-18-2017', time: '1:48.16', meetName: '2017 Mountain Pacific Sports Federation Championships' },
+        { date: '02-18-2017', time: '1:48.74', meetName: '2017 Mountain Pacific Sports Federation Championships' },
+        { date: '01-28-2017', time: '1:49.45', meetName: 'Cal Poly vs. UC Santa Barbara' },
+        { date: '01-14-2017', time: '1:50.16', meetName: 'Cal Poly vs. Pacific (CA)' },
+        { date: '11-19-2016', time: '1:47.53', meetName: 'A3 Performance Invitational' },
+        { date: '11-19-2016', time: '1:51.30', meetName: 'A3 Performance Invitational' },
+        { date: '10-29-2016', time: '1:53.87', meetName: 'UC Santa Barbara vs. Cal Poly' },
+        { date: '02-20-2016', time: '1:48.28', meetName: '2016 Mountain Pacific Sports Federation Championships' },
+        { date: '02-20-2016', time: '1:48.61', meetName: '2016 Mountain Pacific Sports Federation Championships' },
+        { date: '01-30-2016', time: '1:51.21', meetName: 'UC-Santa Barbara vs. Cal Poly' },
+        { date: '01-09-2016', time: '1:52.80', meetName: 'Pacific (California) vs. Cal Poly' },
+        { date: '11-21-2015', time: '1:48.01', meetName: 'A3 Performance Invitational' },
+        { date: '11-21-2015', time: '1:48.70', meetName: 'A3 Performance Invitational' },
+        { date: '10-31-2015', time: '1:49.25', meetName: 'Cal Poly vs. UC-Santa Barbara' },
+        { date: '10-10-2015', time: '1:53.45', meetName: 'Green and Gold Intrasquad' },
+        { date: '10-03-2015', time: '1:51.73', meetName: 'Cal Poly vs. Southern California' },
+        { date: '02-21-2015', time: '1:49.22', meetName: '2015 Mountain Pacific Sports Federation Championships' },
+        { date: '02-21-2015', time: '1:49.16', meetName: '2015 Mountain Pacific Sports Federation Championships' },
+        { date: '11-22-2014', time: '1:49.27', meetName: 'A3 Performance Invitational' },
+        { date: '02-28-2014', time: '1:53.92', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '02-28-2014', time: '1:52.49', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '12-14-2013', time: '1:52.82', meetName: 'Speedo Winter Junior National Championships' },
+        { date: '11-10-2013', time: '1:54.65', meetName: '2013 ST TXLA November Unclassified' },
+        { date: '03-01-2013', time: '1:55.28', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '03-01-2013', time: '1:54.31', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '12-08-2012', time: '1:57.78', meetName: '2012 ST TXLA Jingle Bell Splash' },
+        { date: '11-04-2012', time: '2:03.20', meetName: '2012 November TXLA ST Unclassified' },
+        { date: '10-13-2012', time: '2:04.67', meetName: '2012 ST TXLA Fall Kick Off' },
+        { date: '03-02-2012', time: '1:57.43', meetName: 'Speedo Champions Series - College Station' },
+        {
+            date: '03-02-2012',
+            time: '1:57.43',
+            meetName: 'Speedo Champions Series - College Station, TX (18 & Under - Yards Only)'
+        },
+        { date: '01-21-2012', time: '2:06.72', meetName: "2012 ST TXLA New Year's Classic" },
+        { date: '01-21-2012', time: '2:03.27', meetName: "2012 ST TXLA New Year's Classic" },
+        { date: '12-03-2011', time: '1:59.70', meetName: '2011 NT COR A Winter Classic' },
+        { date: '12-03-2011', time: '2:01.05', meetName: '2011 NT COR A Winter Classic' },
+        { date: '11-20-2011', time: '2:01.87', meetName: '2011 ST AAAA IM Xtreme Games' },
+        { date: '10-22-2011', time: '2:03.15', meetName: '2011 ST Fall Kick Off' },
+        { date: '12-03-2010', time: '2:07.52', meetName: 'South Zone Tisca' },
+        { date: '12-03-2010', time: '2:08.07', meetName: 'South Zone Tisca' },
+        { date: '11-07-2010', time: '2:15.00', meetName: '2010 ST TXLA November Unclassi' },
+        { date: '02-21-2010', time: '2:13.03', meetName: '2010 ST AAAA Short Course Seni' },
+        { date: '02-21-2010', time: '2:14.21', meetName: '2010 ST AAAA Short Course Seni' },
+        { date: '02-06-2010', time: '2:13.88', meetName: '2010 ST TXLA Qualifier' },
+        { date: '01-16-2010', time: '2:15.77', meetName: '2010 ST New Years Classic' },
+        { date: '01-16-2010', time: '2:20.74', meetName: '2010 ST New Years Classic' },
+        { date: '11-14-2009', time: '2:22.91', meetName: 'ST TXLA November Unclassified' },
+        { date: '10-24-2009', time: '2:26.14', meetName: '2009 ST TXLA Fall Kickoff' }
+    ]
+}
+
+export const individualMedleyDataOverTime: SwimmingChartData = {
+    eventName: '400 Yard Individual Medley',
+    swims: [
+        { date: '02-16-2018', time: '3:51.27', meetName: 'Mountain Pacific Sports Federation Championships' },
+        { date: '11-17-2017', time: '3:57.09', meetName: 'UNLV Invitational' },
+        { date: '11-17-2017', time: '3:57.95', meetName: 'UNLV Invitational' },
+        { date: '10-28-2017', time: '3:57.88', meetName: 'Cal Poly vs. UC Santa Barbara' },
+        { date: '09-30-2017', time: '4:02.87', meetName: 'USC vs. Cal Poly' },
+        { date: '02-17-2017', time: '3:51.84', meetName: '2017 Mountain Pacific Sports Federation Championships' },
+        { date: '02-17-2017', time: '3:53.63', meetName: '2017 Mountain Pacific Sports Federation Championships' },
+        { date: '01-28-2017', time: '4:03.08', meetName: 'Cal Poly vs. UC Santa Barbara' },
+        { date: '11-18-2016', time: '3:55.24', meetName: 'A3 Performance Invitational' },
+        { date: '11-18-2016', time: '3:57.39', meetName: 'A3 Performance Invitational' },
+        { date: '02-19-2016', time: '3:52.02', meetName: '2016 Mountain Pacific Sports Federation Championships' },
+        { date: '02-19-2016', time: '3:53.76', meetName: '2016 Mountain Pacific Sports Federation Championships' },
+        { date: '01-16-2016', time: '4:01.56', meetName: 'Cal Poly vs. UC-Santa Cruz' },
+        { date: '11-20-2015', time: '3:54.92', meetName: 'A3 Performance Invitational' },
+        { date: '11-20-2015', time: '3:59.28', meetName: 'A3 Performance Invitational' },
+        { date: '10-31-2015', time: '4:02.31', meetName: 'Cal Poly vs. UC-Santa Barbara' },
+        { date: '10-03-2015', time: '4:04.05', meetName: 'Cal Poly vs. Southern California' },
+        { date: '02-20-2015', time: '3:56.67', meetName: '2015 Mountain Pacific Sports Federation Championships' },
+        { date: '02-20-2015', time: '3:59.21', meetName: '2015 Mountain Pacific Sports Federation Championships' },
+        { date: '01-17-2015', time: '4:09.39', meetName: 'Cal Poly vs. UC-Santa Cruz' },
+        { date: '11-21-2014', time: '3:56.12', meetName: 'A3 Performance Invitational' },
+        { date: '11-21-2014', time: '3:58.04', meetName: 'A3 Performance Invitational' },
+        { date: '11-01-2014', time: '4:06.03', meetName: 'UC-Santa Barbara vs. Cal Poly' },
+        { date: '03-01-2014', time: '3:59.79', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '03-01-2014', time: '4:04.06', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '12-13-2013', time: '4:00.18', meetName: 'Speedo Winter Junior National Championships' },
+        { date: '11-10-2013', time: '4:06.94', meetName: '2013 ST TXLA November Unclassified' },
+        { date: '03-02-2013', time: '4:03.77', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '03-02-2013', time: '4:05.38', meetName: 'Speedo Champions Series - College Station, TX' },
+        { date: '12-08-2012', time: '4:13.28', meetName: '2012 ST TXLA Jingle Bell Splash' },
+        { date: '10-13-2012', time: '4:20.24', meetName: '2012 ST TXLA Fall Kick Off' },
+        { date: '03-03-2012', time: '4:11.05', meetName: 'Speedo Champions Series - College Station' },
+        { date: '03-03-2012', time: '4:11.05', meetName: 'Speedo Champions Series - College Station, TX (18 & Under - Yards Only)' },
+        { date: '12-02-2011', time: '4:13.59', meetName: '2011 NT COR A Winter Classic' },
+        { date: '11-20-2011', time: '4:13.18', meetName: '2011 ST AAAA IM Xtreme Games' },
+        { date: '10-22-2011', time: '4:17.93', meetName: '2011 ST Fall Kick Off' },
+        { date: '12-11-2010', time: '4:29.52', meetName: '2010-ST-TXLA Jingle Bell Splas' },
+        { date: '11-07-2010', time: '4:39.29', meetName: '2010 ST TXLA November Unclassi' },
+        { date: '10-16-2010', time: '4:31.48', meetName: '2010 ST TXLA Fall Kickoff' },
+        { date: '02-20-2010', time: '4:40.49', meetName: '2010 ST AAAA Short Course Seni' },
+        { date: '02-20-2010', time: '4:40.09', meetName: '2010 ST AAAA Short Course Seni' },
+        { date: '02-06-2010', time: '4:43.17', meetName: '2010 ST TXLA Qualifier' },
+        { date: '01-18-2010', time: '4:43.46', meetName: '2010 ST New Years Classic' },
+        { date: '01-18-2010', time: '4:47.40', meetName: '2010 ST New Years Classic' },
+        { date: '11-14-2009', time: '5:00.34', meetName: 'ST TXLA November Unclassified' },
+        { date: '10-24-2009', time: '4:58.55', meetName: '2009 ST TXLA Fall Kickoff' }
+    ]
+}
