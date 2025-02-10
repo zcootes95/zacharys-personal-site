@@ -13,6 +13,11 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    --muted: 0, 0%, 96%;
+    --muted-foreground: 0, 0%, 40%;
+    --background: 0, 0%, 100%;
+    --foreground: 0, 0%, 0%;
 }
 
 a {

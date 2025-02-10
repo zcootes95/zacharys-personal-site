@@ -4,7 +4,6 @@ import { Label } from '@/components/ui/label'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import pica from 'pica'
 import { CopyBlock, dracula, atomOneLight } from 'react-code-blocks'
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from '@/components/ui/menubar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
@@ -98,12 +97,12 @@ const AsciiArtScreen = () => {
     }
 
     return (
-        <Tabs defaultValue='account' className='w-full'>
-            <TabsList className='grid w-full grid-cols-2'>
-                <TabsTrigger value='account'>Generator</TabsTrigger>
-                <TabsTrigger value='password'>Gallery</TabsTrigger>
+        <Tabs defaultValue='generator' className='w-full'>
+            <TabsList className='grid w-full grid-cols-2 gap-2'>
+                <TabsTrigger value='generator'>Generator</TabsTrigger>
+                <TabsTrigger value='gallery'>Gallery</TabsTrigger>
             </TabsList>
-            <TabsContent value='account'>
+            <TabsContent value='generator'>
                 <Card>
                     <CardHeader>
                         <CardTitle>Ascii Art Generator</CardTitle>
@@ -150,7 +149,7 @@ const AsciiArtScreen = () => {
                     </CardFooter>
                 </Card>
             </TabsContent>
-            <TabsContent value='password'>
+            <TabsContent value='gallery'>
                 <Card>
                     <CardHeader>
                         <CardTitle>Gallery</CardTitle>

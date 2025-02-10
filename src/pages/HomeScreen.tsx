@@ -25,11 +25,9 @@ const HomeScreen = () => {
             <div className='w-full grid grid-cols-1 md:grid-cols-[20%_40%_40%] gap-4'>
                 <div className='flex flex-col bg-blue-100 p-1 rounded-md'>
                     <div className='m-4'>
-                        <ParallaxCard>
-                            <div className='w-full aspect-square rounded-full border-4 border-white'>
-                                <CustomImage src={'/home/bio_pic.jpg'} className='w-full h-full object-contain rounded-full shadow-lg bg-secondary' />
-                            </div>
-                        </ParallaxCard>
+                        <div className='w-full aspect-square rounded-full border-4 border-white'>
+                            <CustomImage src={'/home/bio_pic.jpg'} className='w-full h-full object-contain rounded-full shadow-lg bg-secondary' />
+                        </div>
                     </div>
                     <div className='text-center font-bold text-xl'>Zachary Cootes</div>
                     <div className='text-center font-semibold text-sm text-gray-500'>Software Developer</div>
@@ -100,7 +98,7 @@ const HomeScreen = () => {
                         </div>
                         <div className='flex justify-end'>
                             <Link
-                                to='/acsii-art'
+                                to='/ascii-art'
                                 className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'
                             >
                                 Get Artsy
@@ -114,11 +112,11 @@ const HomeScreen = () => {
                         <div className='font-bold text-lg mb-2'>Swimming</div>
                         <div className='text-sm text-left'>Explore my 10 year journey to master, relish, and splash through the grand sport of swimming.</div>
                         <Link to='/swimming' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
-                            Get Artsy
+                            Splish Splash
                         </Link>
                     </div>
                     <div className='flex-1 bg-blue-100 flex flex-col items-left justify-center rounded-md p-6'>
-                        <div className='font-bold text-lg mb-2'>Top Queso's in Austin, TX</div>
+                        <div className='font-bold text-lg mb-2'>Queso in Austin, TX</div>
                         <div className='text-sm text-left flex-grow'>
                             After leaving Austin, I realized that the term queso in not universal. Most places I go to think I'm talking about a plastic-y ball
                             park cheese that has no flavor or substance. Queso is so much more and everytime I'm back in Austin I make sure to get my fill and

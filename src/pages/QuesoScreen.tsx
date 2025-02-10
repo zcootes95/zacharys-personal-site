@@ -12,7 +12,7 @@ const QuesoScreen = () => {
                 {quesoData.map((item, index) => (
                     <div key={index} className='flex flex-col gap-8 min-h-[24rem] md:h-96 md:flex-row items-center'>
                         <div className={`w-full h-64 md:h-full md:w-1/2 order-1 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
-                            <CustomImage src={item.imagePath} alt={item.imageAlt} className='w-full h-full object-contain rounded-lg shadow-lg bg-blue-300' />
+                            <CustomImage src={item.imagePath} alt={item.imageAlt} className='w-full h-full object-contain rounded-lg shadow-lg bg-blue-100' />
                         </div>
                         <Card className={`w-full md:w-1/2 h-full flex flex-col order-2 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                             <CardContent className='pt-6 h-full flex flex-col'>
