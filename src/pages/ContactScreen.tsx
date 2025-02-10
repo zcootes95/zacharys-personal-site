@@ -15,7 +15,7 @@ const ContactScreen = () => {
     return (
         <div className='flex flex-col items-center'>
             <h1 className='m-4 text-xl'> Contact me</h1>
-            <h2>Click all the dots to reveal the my email!</h2>
+            <h2>Click all the dots to reveal my email!</h2>
             <div className='flex flex-row m-20'>
                 <div
                     onClick={() => {

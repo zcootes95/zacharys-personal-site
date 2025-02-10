@@ -9,7 +9,7 @@ export const AppHeader = () => {
                     <div className='flex-1' />
 
                     <ScootesLink to='/' className='!no-underline !text-inherit hover:!text-inherit'>
-                        <h2 className='leading-[4rem]'>Zachary Cootes</h2>
+                        <div className='leading-[4rem] text-2xl'>Zachary Cootes</div>
                     </ScootesLink>
                     <div className='flex-1' />
                 </div>

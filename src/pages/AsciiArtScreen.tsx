@@ -4,8 +4,15 @@ import { Label } from '@/components/ui/label'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import pica from 'pica'
 import { CopyBlock, dracula, atomOneLight } from 'react-code-blocks'
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from '@/components/ui/menubar'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
+import { Camera } from 'lucide-react' // update
+import { foxtailAsciiArt } from '@/constants/foxtailAscii'
+import { justTalkAsciiArt } from '@/constants/justtalk'
 
-const imageToAscii = async (file: File, maxPixelWidth = 1200, estimatedCharWidth = 8): Promise<string> => {
+const imageToAscii = async (file: File, maxPixelWidth = 1000, estimatedCharWidth = 8): Promise<string> => {
     // Determine the max number of ascii columns that fit in maxPixelWidth.
     const asciiColumns = Math.floor(maxPixelWidth / estimatedCharWidth)
     // Because each ascii char is duplicated, our target width is half that.
@@ -65,7 +72,9 @@ const imageToAscii = async (file: File, maxPixelWidth = 1200, estimatedCharWidth
 }
 const AsciiArtScreen = () => {
     const [file, setFile] = useState<File | null>(null)
+    const [inputAsciiCharacters, setInputAsciiCharacters] = useState<string | undefined>('@%#*+=-:., ')
     const [asciiArt, setAsciiArt] = useState('')
+
     const [isLoading, setIsLoading] = useState(false)
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -73,6 +82,7 @@ const AsciiArtScreen = () => {
             setFile(e.target.files[0])
         }
     }
+
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault()
         if (!file) return
@@ -86,48 +96,102 @@ const AsciiArtScreen = () => {
             setIsLoading(false)
         }
     }
-    if (isLoading) {
-        return <div>Loading...</div>
-    }
-
-    if (asciiArt !== '') {
-        return (
-            <div className='flex flex-col items-center'>
-                <pre style={{ whiteSpace: 'pre', overflowX: 'auto', fontSize: '10px' }}>
-                    <CopyBlock
-                        text={asciiArt}
-                        theme={atomOneLight}
-                        language='text'
-                        codeBlock
-                        customStyle={{ fontSize: '14px' }}
-                        wrapLongLines={false}
-                        codeBlockStyle={{}}
-                        showLineNumbers={false}
-                    />
-                </pre>
-                <button onClick={() => setAsciiArt('')}>Clear</button>
-            </div>
-        )
-    }
 
     return (
-        <div className='flex flex-col items-center'>
-            <form onSubmit={handleSubmit} className='mt-10'>
-                <div className='mb-4 mt-4'>
-                    <Label htmlFor='picture'>Choose a picture to make into Ascii Art</Label>
-                    <Input id='picture' type='file' className='rounded-l' onChange={onChange} />
-                </div>
-                <div className='mb-4 mt-4'>
-                    <Label htmlFor=''>Choose characters to use for Ascii Art</Label>
-                    <Input id='ascii-characters' type='text' className='rounded-l' />
-                </div>
-
-                <div className='my-10 flex flex-row justify-center'>
-                    <button type='submit'>Convert to ASCII</button>
-                </div>
-            </form>
-        </div>
+        <Tabs defaultValue='account' className='w-full'>
+            <TabsList className='grid w-full grid-cols-2'>
+                <TabsTrigger value='account'>Generator</TabsTrigger>
+                <TabsTrigger value='password'>Gallery</TabsTrigger>
+            </TabsList>
+            <TabsContent value='account'>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Ascii Art Generator</CardTitle>
+                        <CardDescription>Add a photo to generate Ascii Art. Note the simpler the photo the better the outcome.</CardDescription>
+                    </CardHeader>
+                    <CardContent className='space-y-2'>
+                        {asciiArt !== '' ? (
+                            <div className='flex flex-col items-center'>
+                                <pre style={{ whiteSpace: 'pre', overflowX: 'auto', fontSize: '10px' }}>
+                                    <CopyBlock
+                                        text={asciiArt}
+                                        theme={atomOneLight}
+                                        language='text'
+                                        codeBlock
+                                        customStyle={{ fontSize: '14px' }}
+                                        wrapLongLines={false}
+                                        codeBlockStyle={{}}
+                                        showLineNumbers={false}
+                                    />
+                                </pre>
+                            </div>
+                        ) : (
+                            <form>
+                                <div className='mb-2 mt-2'>
+                                    <Label htmlFor='picture'>Choose a picture to make into Ascii Art</Label>
+                                    <Input id='picture' type='file' className='rounded-l p-2 m-2' onChange={onChange} />
+                                </div>
+                            </form>
+                        )}
+                    </CardContent>
+                    <CardFooter>
+                        <Button
+                            onClick={(e) => {
+                                if (asciiArt) {
+                                    setAsciiArt('')
+                                    setFile(null)
+                                } else {
+                                    handleSubmit(e)
+                                }
+                            }}
+                        >
+                            {asciiArt ? 'Clear' : 'Convert to ASCII!'}{' '}
+                        </Button>
+                    </CardFooter>
+                </Card>
+            </TabsContent>
+            <TabsContent value='password'>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Gallery</CardTitle>
+                        <CardDescription>Enjoy my beautiful Ascii Art</CardDescription>
+                    </CardHeader>
+                    <CardContent className='space-y-2'>
+                        <div className='space-y-1'>
+                            <pre style={{ whiteSpace: 'pre', overflowX: 'auto', fontSize: '10px' }}>
+                                <CopyBlock
+                                    text={foxtailAsciiArt}
+                                    theme={atomOneLight}
+                                    language='text'
+                                    codeBlock
+                                    customStyle={{ fontSize: '14px', fontFamily: 'monospace' }}
+                                    wrapLongLines={false}
+                                    codeBlockStyle={{}}
+                                    showLineNumbers={false}
+                                />
+                            </pre>
+                        </div>
+                        <div className='space-y-1'>
+                            <pre style={{ whiteSpace: 'pre', overflowX: 'auto', fontSize: '10px' }}>
+                                <CopyBlock
+                                    text={justTalkAsciiArt}
+                                    theme={atomOneLight}
+                                    language='text'
+                                    codeBlock
+                                    customStyle={{ fontSize: '14px', fontFamily: 'monospace' }}
+                                    wrapLongLines={false}
+                                    codeBlockStyle={{}}
+                                    showLineNumbers={false}
+                                />
+                            </pre>
+                        </div>
+                    </CardContent>
+                </Card>
+            </TabsContent>
+        </Tabs>
     )
+
+    return <div className='flex flex-col items-center'></div>
 }
 
 export default AsciiArtScreen
