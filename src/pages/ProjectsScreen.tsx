@@ -21,7 +21,7 @@ const ProjectsScreen = () => {
                 </CardHeader>
                 <CardContent>
                     <div className='flex flex-col md:flex-row gap-6 md:p-4'>
-                        <div className='flex flex-1'>
+                        <div className='w-full md:w-1/5'>
                             <CustomImage className='w-full max-h-48 object-contain aspect-auto rounded-md ' src='home/foxtail' alt="Foxtail AI's Logo" />
                         </div>
                         <div className='flex-2'>
@@ -74,26 +74,24 @@ const ProjectsScreen = () => {
             <Card className='mt-4'>
                 <CardHeader>
                     <CardTitle className='text-lg'>Pennyroyal</CardTitle>
-                    <CardDescription>
+                    <CardDescription className='text-md'>
                         AI-powered image-generation site using TypeScript, React, and Redux, enabling users to purchase custom pet merchandise featuring
-                        AI-stylized photos.
+                        AI-stylized photos. Utilized Midjourney for styling pet photos
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className='flex flex-col md:flex-row gap-6 md:p-4'>
-                        <div className='flex flex-1'>
-                            <CustomImage className='w-full max-h-48 object-contain aspect-auto rounded-md ' src='home/pennyroyal' alt="Pennyroyal's Logo" />
+                        <div className='w-full md:w-1/5'>
+                            <CustomImage className='w-full max-h-48 object-contain aspect-auto rounded-md' src='home/pennyroyal' alt="Pennyroyal's Logo" />
                         </div>
-                        <div className='flex-2'>
-                            {' '}
-                            <>
-                                <div className='text-md mb-4 font-semibold'>My Role & Highlights</div>
-                                <ul className='list-none'>
-                                    <li>• Architected site design</li>
-                                    <li>• Developed </li>
-                                    <li>• </li>
-                                </ul>
-                            </>
+                        {/* Content container: 80% width on medium screens */}
+                        <div className='w-full md:w-4/5'>
+                            <div className='text-md mb-4 font-semibold'>My Role & Highlights</div>
+                            <ul className='list-none'>
+                                <li>• Architected site design</li>
+                                <li>• Developed</li>
+                                <li>• ...</li>
+                            </ul>
                         </div>
                     </div>
                     <div className='mx-auto px-4 flex flex-col gap-4 mt-4'>

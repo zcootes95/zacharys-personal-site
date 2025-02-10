@@ -1,5 +1,6 @@
 import { CustomImage } from '@/components/common/CustomImage'
 import ParallaxCard from '@/components/common/ParallaxCard'
+import { ScootesLink } from '@/components/common/ScootesLink'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
@@ -21,12 +22,7 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <div
-                className='w-full grid gap-4 flex flex-grow flex-col'
-                style={{
-                    gridTemplateColumns: 'calc((100% - 4rem) * 0.2) calc((100% - 4rem) * 0.4) calc((100% - 4rem) * 0.4)'
-                }}
-            >
+            <div className='w-full grid grid-cols-1 md:grid-cols-[20%_40%_40%] gap-4'>
                 <div className='flex flex-col bg-gray-200 p-1 rounded-md'>
                     <div className='m-4'>
                         <ParallaxCard>
@@ -37,7 +33,7 @@ const HomeScreen = () => {
                     </div>
                     <div className='text-center font-bold text-xl'>Zachary Cootes</div>
                     <div className='text-center font-semibold text-sm text-gray-500'>Software Developer</div>
-                    <div className='flex flex-col items-center w-full px-4 overflow-hidden flex-grow mt-4 mb-3'>
+                    <div className='flex flex-col items-center w-full px-4 overflow-hidden flex-grow mt-4'>
                         <div className={`${badgeThemes[selectedBadge]} w-full rounded-md p-4 flex-grow`}>
                             <div className='flex flex-wrap items-center gap-2'>
                                 {badges.map((badge) => (
@@ -45,7 +41,7 @@ const HomeScreen = () => {
                                         key={badge}
                                         onClick={() => setSelectedBadge(badge)}
                                         className={`cursor-pointer text-xs px-1 py-0.5 
-              ${selectedBadge === badge ? 'border-2 border-white' : 'bg-blue-600 text-white'}`}
+              ${selectedBadge === badge ? 'border-2 border-white' : 'bg-blue-600 text-white border-2'}`}
                                     >
                                         {badge}
                                     </Badge>
@@ -54,12 +50,18 @@ const HomeScreen = () => {
                         </div>
                     </div>
                     <div className='w-full p-4'>
-                        <Button className='w-full self-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 text-sm rounded'>
-                            <Link to='/swimming'>Download Resume</Link>
-                        </Button>
-                        <Button className='w-full self-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 text-sm rounded mt-2'>
-                            <Link to='/swimming'>Contact me</Link>
-                        </Button>
+                        <Link
+                            to='/contact'
+                            className='w-full self-end bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 text-sm rounded mt-2 inline-block text-center'
+                        >
+                            Download Resume
+                        </Link>{' '}
+                        <Link
+                            to='/contact'
+                            className='w-full self-end bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 text-sm rounded mt-2 inline-block text-center'
+                        >
+                            Contact me
+                        </Link>
                     </div>
                 </div>
 
@@ -82,40 +84,45 @@ const HomeScreen = () => {
                             <CustomImage src='/home/pennyroyal.png' className='h-10 rounded-sm' />
                             <div className='font-semibold'>Pennyroyal</div>
                         </div>
-
-                        <Button className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 text-sm rounded'>
-                            <Link to='/projects'>Check it out</Link>
-                        </Button>
+                        <Link to='/projects' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
+                            Check it out
+                        </Link>
                     </div>
                     <div className='flex-1 bg-blue-300 flex flex-col items-left justify-center rounded-md p-6'>
-                        <div className='font-bold text-lg mb-2'>Ascii Art</div>
-                        <div className='text-sm text-left'>
+                        <div className='flex font-bold text-lg mb-2'>Ascii Art</div>
+                        <div className='flex text-sm text-left flex-grow'>
                             Its the little things in life. I think using Ascii art when possible is a fun way to add a little extra to a project. Sometimes its
                             that really cool looking ascii art message after tests pass that make it all worth it.
                         </div>
-                        <Button className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 text-sm rounded'>
-                            <Link to='/ascii-art'>Get Artsy</Link>
-                        </Button>
+                        <div className='flex justify-end'>
+                            <Link
+                                to='/acsii-art'
+                                className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'
+                            >
+                                Get Artsy
+                            </Link>
+                        </div>
                     </div>
                 </div>
+
                 <div className='bg-gray-300 p-4 flex flex-col gap-4 rounded-md'>
                     <div className='bg-blue-300 flex flex-col items-left justify-center rounded-md p-6'>
                         <div className='font-bold text-lg mb-2'>Swimming</div>
                         <div className='text-sm text-left'>Explore my 10 year journey to master, relish, and splash through the grand sport of swimming.</div>
-                        <Button className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 text-sm rounded'>
-                            <Link to='/swimming'>Splish Splash</Link>
-                        </Button>
+                        <Link to='/swimming' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
+                            Get Artsy
+                        </Link>
                     </div>
                     <div className='flex-1 bg-blue-300 flex flex-col items-left justify-center rounded-md p-6'>
                         <div className='font-bold text-lg mb-2'>Top Queso's in Austin, TX</div>
-                        <div className='text-sm text-left'>
+                        <div className='text-sm text-left flex-grow'>
                             After leaving Austin, I realized that the term queso in not universal. Most places I go to think I'm talking about a plastic-y ball
                             park cheese that has no flavor or substance. Queso is so much more and everytime I'm back in Austin I make sure to get my fill and
                             scratch the ever hungry queso itch.
                         </div>
-                        <Button className='mt-4 self-end bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-1 px-2 text-sm rounded'>
-                            <Link to='/ascii-art'>Let's get Cheesy</Link>
-                        </Button>
+                        <Link to='/queso' className='mt-4 self-end bg-yellow-500 hover:bg-yellow-700 text-white p-2 text-sm rounded inline-block text-center'>
+                            Let's get Cheesy
+                        </Link>
                     </div>
 
                     <div className='max-w-md w-full p-6 bg-blue-300 rounded-lg shadow-md'>

@@ -8,6 +8,7 @@ export const foxtailTechnologiesData = [
     { imagePath: '/projects/docker', name: 'Docker' },
     { imagePath: '/projects/openai', name: 'OpenAi' },
     { imagePath: '/projects/vite', name: 'Vite' },
+    { imagePath: '/projects/jest', name: 'Jest' },
     { imagePath: '/projects/mui', name: 'Mui' },
     { imagePath: '/projects/auth0', name: 'Auth0' },
     { imagePath: '/projects/sentry', name: 'Sentry' },
