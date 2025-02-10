@@ -1,3 +1,4 @@
+import { ScootesLink } from '@/components/common/ScootesLink'
 import { useState } from 'react'
 import ConfettiExplosion from 'react-confetti-explosion'
 
@@ -53,7 +54,9 @@ const ContactScreen = () => {
             {isDot1Clicked && isDot2Clicked && isDot3Clicked && (
                 <div className='flex flex-col items-center'>
                     <ConfettiExplosion force={0.2} duration={4000} particleCount={200} width={400} colors={confettiGreenShades} />
-                    <h1>scootes26@gmail.com</h1>
+                    <ScootesLink external href='mailto:scootes26@gmail.com'>
+                        scootes26@gmail.com
+                    </ScootesLink>
                 </div>
             )}
         </div>
