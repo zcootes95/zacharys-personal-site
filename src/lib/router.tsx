@@ -7,7 +7,6 @@ import HomeScreen from '@/pages/HomeScreen'
 import ErrorScreen from '@/pages/system/ErrorScreen'
 
 const ProjectsScreen = lazy(() => import('@/pages/ProjectsScreen'))
-const AboutScreen = lazy(() => import('@/pages/AboutScreen'))
 const ContactScreen = lazy(() => import('@/pages/ContactScreen'))
 const AsciiArtScreen = lazy(() => import('@/pages/AsciiArtScreen'))
 const SwimmingScreen = lazy(() => import('@/pages/SwimmingScreen'))
@@ -27,10 +26,7 @@ export const AppRouter = createBrowserRouter(
                     path: 'projects',
                     element: <LazyRoute Component={ProjectsScreen} />
                 },
-                {
-                    path: 'about',
-                    element: <LazyRoute Component={AboutScreen} />
-                },
+
                 {
                     path: 'contact',
                     element: <LazyRoute Component={ContactScreen} />
