@@ -1,4 +1,4 @@
-const loadImageFromDataUrl = async (dataUrl: string): Promise<HTMLImageElement> => {
+export const loadImageFromDataUrl = async (dataUrl: string): Promise<HTMLImageElement> => {
     return new Promise((resolve, reject) => {
         // Option 1: create an <img> via the DOM
         const img = document.createElement('img')

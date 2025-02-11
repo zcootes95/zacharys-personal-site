@@ -1,6 +1,7 @@
 import { fileToDataUrl } from './filetoDataUrl'
 import { pixelsToAscii } from './pixelsToAscii'
 import { resizeImage } from './resizeImage'
+import { loadImageFromDataUrl } from './loadImageFromDataUrl'
 
 export const imageToAscii = async (file: File): Promise<string | undefined> => {
     try {
@@ -15,9 +16,11 @@ export const imageToAscii = async (file: File): Promise<string | undefined> => {
 
         // 4. convert pixels to characters
         const asciiImage = pixelsToAscii(canvas)
+
         return asciiImage
     } catch (err) {
         // alert the user
+        console.log(err)
         alert('Error converting image to ASCII')
     }
 }
