@@ -97,9 +97,6 @@ const HomeScreen = () => {
                             fulfilled. Hunger is the best sauce. When I'm not exploring the depths of programming, I'm riding my bike up a mountain, swimming in
                             the sun, or tinkering with something.
                         </div>
-                        <Link to='/about' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
-                            About me
-                        </Link>
                     </div>
                     <div className='flex-1 bg-blue-100 flex flex-col items-left justify-center rounded-md p-6 gap-2'>
                         <div className='font-bold text-lg mb-4'>Projects</div>
