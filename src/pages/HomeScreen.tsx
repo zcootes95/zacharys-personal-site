@@ -22,7 +22,7 @@ type BadgeName =
     | 'Sun Craver'
     | 'Ideator'
     | 'Early Bird'
-    | 'Live Music Appreciator'
+    | 'Music Appreciator'
 
 const badgeThemes: Record<BadgeName, string> = {
     Developer: 'bg-blue-300',
@@ -39,7 +39,7 @@ const badgeThemes: Record<BadgeName, string> = {
     'Curry Lover': 'bg-pink-500',
     'Sun Craver': 'bg-yellow-200',
     Ideator: 'bg-blue-200',
-    'Live Music Appreciator': 'bg-red-200'
+    'Music Appreciator': 'bg-red-200'
 }
 const badges = Object.keys(badgeThemes) as BadgeName[]
 const HomeScreen = () => {
@@ -97,6 +97,9 @@ const HomeScreen = () => {
                             fulfilled. Hunger is the best sauce. When I'm not exploring the depths of programming, I'm riding my bike up a mountain, swimming in
                             the sun, or tinkering with something.
                         </div>
+                        <Link to='/about' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
+                            About me
+                        </Link>
                     </div>
                     <div className='flex-1 bg-blue-100 flex flex-col items-left justify-center rounded-md p-6 gap-2'>
                         <div className='font-bold text-lg mb-4'>Projects</div>
@@ -152,7 +155,7 @@ const HomeScreen = () => {
                         </Link>
                     </div>
 
-                    <div className='max-w-md w-full p-6 bg-blue-100 rounded-lg shadow-md'>
+                    <div className='max-w-md w-full p-6 bg-blue-100 rounded-lg'>
                         <div className='font-bold text-lg mb-2'>Favorite Poem Stanza</div>
                         <p className='text-sm text-gray-700'>
                             The woods are lovely, dark and deep,

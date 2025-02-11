@@ -1,4 +1,3 @@
-// src/App.js
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { AsciiGallery } from '@/components/ascii/AsciiGallery'
 import { AsciiGenerator } from '@/components/ascii/AsciiGenerator'
