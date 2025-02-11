@@ -1,16 +1,16 @@
 import { CustomImage } from '@/components/common/CustomImage'
 import ParallaxCard from '@/components/common/ParallaxCard'
-import ProjectCard from '@/components/common/ProjectCard'
 import { LinkButton } from '@/components/common/ScootesLink'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { foxtailTechnologiesData, pennyroyalTechnologiesData } from '@/constants/technologyData'
+import { PageHeader } from '@/layout/PageHeader'
 import { Star } from 'lucide-react'
-import { title } from 'process'
+import { Link } from 'react-router-dom'
 
 const ProjectsScreen = () => {
     return (
         <div>
-            <div className='text-4xl font-bold mb-8'>Projects</div>
+            <PageHeader title='Projects' />
             <Card>
                 <CardHeader>
                     <CardTitle className='text-xl'>Foxtail AI</CardTitle>

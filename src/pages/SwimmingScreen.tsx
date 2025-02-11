@@ -6,11 +6,12 @@ import { CustomImage } from '@/components/common/CustomImage'
 import { ScootesLink } from '@/components/common/ScootesLink'
 import { SwimmingProgressionChart } from '@/components/swimming/SwimmingProgressionChart'
 import { swimmingTeams } from '@/constants/swimmingTeams'
+import { PageHeader } from '@/layout/PageHeader'
 
 const SwimmingScreen = () => {
     return (
         <div className='w-full max-w-6xl mx-auto py-8 px-4'>
-            <div className='text-4xl font-bold mb-8'>From Man to Fish</div>
+            <PageHeader title='From Man to Fish' />
             <div className='space-y-6'>
                 <div className='flex flex-col gap-8 min-h-[24rem] md:h-96 md:flex-row items-center'>
                     <div className={`w-full h-64 md:h-full md:w-1/2 order-1 md:order-2`}>

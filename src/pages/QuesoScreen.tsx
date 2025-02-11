@@ -2,11 +2,12 @@ import { CustomImage } from '@/components/common/CustomImage'
 import { ScootesLink } from '@/components/common/ScootesLink'
 import { Card, CardContent } from '@/components/ui/card'
 import { quesoData } from '@/constants/quesoData'
+import { PageHeader } from '@/layout/PageHeader'
 
 const QuesoScreen = () => {
     return (
         <div>
-            <div className='font-bold text-4xl'>Austin Texas Queso Heiarchy</div>
+            <PageHeader title='Austin Texas Queso Hierarchy' />
 
             <div className='w-full max-w-6xl mx-auto py-8 space-y-8'>
                 {quesoData.map((item, index) => (
