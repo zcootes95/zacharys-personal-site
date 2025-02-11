@@ -75,8 +75,7 @@ const ProjectsScreen = () => {
                 <CardHeader>
                     <CardTitle className='text-lg'>Pennyroyal</CardTitle>
                     <CardDescription className='text-md'>
-                        AI-powered image-generation site using TypeScript, React, and Redux, enabling users to purchase custom pet merchandise featuring
-                        AI-stylized photos. Utilized Midjourney for styling pet photos
+                        AI-powered image-generation site, enabling users to purchase custom pet merchandise featuring AI-stylized photos.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -88,9 +87,9 @@ const ProjectsScreen = () => {
                         <div className='w-full md:w-4/5'>
                             <div className='text-md mb-4 font-semibold'>My Role & Highlights</div>
                             <ul className='list-none'>
-                                <li>• Architected site design</li>
-                                <li>• Developed</li>
-                                <li>• ...</li>
+                                <li>• Developed site using TypeScript, React, and Redux, enabling the purchase of custom pet merchandise.</li>
+                                <li>• Integrated Midjourney to transform user-submitted pet images into unique, AI-stylized designs.</li>
+                                <li>• Designed and Implemented full user flow for selecting, designing, and purchasing pet merchandise.</li>
                             </ul>
                         </div>
                     </div>

@@ -6,15 +6,40 @@ import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-type BadgeName = 'Developer' | 'Designer' | 'Open Source' | 'Enthusiast' | 'Traveler' | 'Musician'
+
+type BadgeName =
+    | 'Developer'
+    | 'Traveler'
+    | 'Cyclist'
+    | 'Inventor'
+    | 'Explorer'
+    | 'Friend'
+    | 'Comedian'
+    | 'Water Tester'
+    | 'Pacifist'
+    | 'Origami Folder'
+    | 'Curry Lover'
+    | 'Sun Craver'
+    | 'Ideator'
+    | 'Early Bird'
+    | 'Live Music Appreciator'
 
 const badgeThemes: Record<BadgeName, string> = {
     Developer: 'bg-blue-300',
-    Designer: 'bg-green-300',
-    'Open Source': 'bg-red-300',
-    Enthusiast: 'bg-yellow-300',
+    Inventor: 'bg-yellow-300',
+    'Early Bird': 'bg-green-300',
+    Cyclist: 'bg-red-300',
     Traveler: 'bg-purple-300',
-    Musician: 'bg-pink-300'
+    Explorer: 'bg-pink-300',
+    Friend: 'bg-blue-500',
+    Comedian: 'bg-yellow-500',
+    'Water Tester': 'bg-green-500',
+    Pacifist: 'bg-red-500',
+    'Origami Folder': 'bg-purple-500',
+    'Curry Lover': 'bg-pink-500',
+    'Sun Craver': 'bg-yellow-200',
+    Ideator: 'bg-blue-200',
+    'Live Music Appreciator': 'bg-red-200'
 }
 const badges = Object.keys(badgeThemes) as BadgeName[]
 const HomeScreen = () => {
@@ -72,9 +97,6 @@ const HomeScreen = () => {
                             fulfilled. Hunger is the best sauce. When I'm not exploring the depths of programming, I'm riding my bike up a mountain, swimming in
                             the sun, or tinkering with something.
                         </div>
-                        <Link to='/about' className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'>
-                            About me
-                        </Link>
                     </div>
                     <div className='flex-1 bg-blue-100 flex flex-col items-left justify-center rounded-md p-6 gap-2'>
                         <div className='font-bold text-lg mb-4'>Projects</div>
