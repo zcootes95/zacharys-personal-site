@@ -10,7 +10,7 @@ type ProjectCardProps = {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-    const { description, name, roles, technologies, link } = project
+    const { description, name, roles, technologies, link, projectImagePath } = project
     return (
         <Card className='mb-8'>
             <CardHeader>
@@ -19,8 +19,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             </CardHeader>
             <CardContent>
                 <div className='flex flex-col md:flex-row gap-6 md:p-4'>
-                    <div className='w-full md:w-1/5'>
-                        <CustomImage className='w-full max-h-48 object-contain aspect-auto rounded-md ' src='home/foxtail' alt="Foxtail AI's Logo" />
+                    <div className='w-full md:w-1/5 rounded-md'>
+                        <CustomImage className='w-full max-h-48 object-contain aspect-auto rounded-md ' src={projectImagePath} alt='Project logo' />
                     </div>
                     <div className='flex-2'>
                         {' '}

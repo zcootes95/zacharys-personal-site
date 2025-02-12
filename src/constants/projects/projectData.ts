@@ -6,6 +6,7 @@ export type ProjectData = {
     roles: string[]
     link?: string
     technologies: TechnologyData[]
+    projectImagePath: string
 }
 export const projectData: ProjectData[] = [
     {
@@ -23,7 +24,8 @@ export const projectData: ProjectData[] = [
             'Accelerated listing creation with ~20-second AI-powered generation'
         ],
         link: 'https://foxtail.ai/',
-        technologies: foxtailTechnologiesData
+        technologies: foxtailTechnologiesData,
+        projectImagePath: 'home/foxtail'
     },
     {
         name: 'Pennyroyal',
@@ -33,6 +35,7 @@ export const projectData: ProjectData[] = [
             'Integrated Midjourney to transform user-submitted pet images into unique, AI-stylized designs.',
             'Designed and Implemented full user flow for selecting, designing, and purchasing pet merchandise.'
         ],
-        technologies: pennyroyalTechnologiesData
+        technologies: pennyroyalTechnologiesData,
+        projectImagePath: 'home/pennyroyal'
     }
 ]
