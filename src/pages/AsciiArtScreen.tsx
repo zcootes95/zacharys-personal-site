@@ -5,7 +5,7 @@ import { PageHeader } from '@/layout/PageHeader'
 
 const AsciiArtScreen = () => {
     return (
-        <div>
+        <div className='flex flex-col w-full'>
             <PageHeader title='Ascii Art' />
 
             <Tabs defaultValue='generator' className='w-full'>

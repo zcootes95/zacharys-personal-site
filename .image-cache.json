@@ -368,5 +368,35 @@
       984,
       1290
     ]
+  },
+  "src/assets/images/home/bio_pic2.jpg": {
+    "hash": "49aa4eb1b1b56f14e472d90b32f56317",
+    "lastProcessed": "2025-02-12T17:57:50.642Z",
+    "sizes": [
+      270,
+      768,
+      984,
+      1290
+    ]
+  },
+  "src/assets/images/home/bio_pic_pointing.jpg": {
+    "hash": "eefcd1af961b0f18831d757652186013",
+    "lastProcessed": "2025-02-12T17:51:08.642Z",
+    "sizes": [
+      270,
+      768,
+      984,
+      1290
+    ]
+  },
+  "src/assets/images/home/bio_pic3.jpg": {
+    "hash": "2334663a1869d76afc99d46eefa181e4",
+    "lastProcessed": "2025-02-12T17:58:25.323Z",
+    "sizes": [
+      270,
+      768,
+      984,
+      1290
+    ]
   }
 }

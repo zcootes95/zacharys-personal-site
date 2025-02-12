@@ -62,7 +62,6 @@ export const AsciiGenerator = () => {
             </CardContent>
             <CardFooter>
                 <Button
-                    className='mt-4 self-end bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm rounded inline-block text-center'
                     onClick={(e) => {
                         if (asciiArt) {
                             setAsciiArt('')
