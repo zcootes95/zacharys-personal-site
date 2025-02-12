@@ -64,8 +64,7 @@ const HomeScreen = () => {
                     route='/ascii-art'
                     routeText='Get Artsy'
                     title='Ascii Art'
-                    contentText='Its the little things in life. I think using Ascii art when possible is a fun way to add a little extra to a project. Sometimes its that
-                        really cool looking ascii art message after tests pass that make it all worth it.'
+                    contentText="It's the little things in life. I think using Ascii art when possible is a fun way to add a little extra to a project. Sometimes it's that really cool looking ascii art message after tests pass that make it all worth it."
                 />
             </div>
 

@@ -47,7 +47,7 @@ export const SwimmingProgressionChart = (props: SwimmingProgressionChartProps) =
                 )}
             </div>
 
-            <div className='font-semibold text-sm text-gray-700 mb-4 whitespace-nowrap'>
+            <div className='font-semibold text-sm text-gray-700 mb-4 whitespace-nowrap overflow-hidden overflow-ellipsis'>
                 {hoveredData
                     ? `${hoveredData.meetName}, ${formatDate(hoveredData.date)}`
                     : bestTimeEntry
