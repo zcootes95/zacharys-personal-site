@@ -12,7 +12,7 @@ const ContactScreen = () => {
     const [isDot3Exploding, setIsDot3Exploding] = useState(false)
 
     return (
-        <div className='flex flex-col  w-full'>
+        <div className='flex flex-col w-full'>
             <PageHeader title='Contact Me' />
             <div className='flex flex-col items-center'>
                 <div className='text-xl font-regular'>Click all the dots to reveal my email!</div>

@@ -5,14 +5,14 @@ import { Separator } from '@radix-ui/react-separator'
 export const AppHeader = () => {
     return (
         <>
-            <header className='w-full border-b bg-background'>
-                <div className='flex container mx-auto max-w-6xl py-2 align-center'>
+            <header className='w-full bg-background '>
+                <div className='flex container mx-auto max-w-6xl py-2 px-6'>
                     <div className='h-16 w-16 scale-x-[-1] rounded-xl'>
                         <CustomImage src='/home/scooter.png' className='rounded-xl' />
                     </div>
                     <div className='flex-1' />
                     <ScootesLink to='/' className='!no-underline !text-inherit hover:!text-inherit'>
-                        <div className='leading-[4rem] text-2xl'>Zachary Cootes</div>
+                        <div className='leading-[4rem] text-2xl font-bold'>Zachary Cootes</div>
                     </ScootesLink>
                     <div className='flex-1' />
                     <div className='h-16 w-16 rounded-xl'>

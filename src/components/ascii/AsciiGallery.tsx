@@ -1,10 +1,11 @@
-import { foxtailAsciiArt } from '@/constants/foxtailAscii'
-import { pennyroyalAsciiArt } from '@/constants/pennyroyalAscii'
-import { zacharyAsciiArt } from '@/constants/zacharyAscii'
+import { foxtailAsciiArt } from '@/constants/ascii/foxtailAscii'
+import { pennyroyalAsciiArt } from '@/constants/ascii/pennyroyalAscii'
+import { zacharyAsciiArt } from '@/constants/ascii/zacharyAscii'
 import { atomOneLight, CopyBlock } from 'react-code-blocks'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { scooterAscii } from '@/constants/ascii/scooterAscii'
 
-const asciiArtTexts = [foxtailAsciiArt, pennyroyalAsciiArt, zacharyAsciiArt]
+const asciiArtTexts = [foxtailAsciiArt, pennyroyalAsciiArt, zacharyAsciiArt, scooterAscii]
 
 export const AsciiGallery = () => {
     return (

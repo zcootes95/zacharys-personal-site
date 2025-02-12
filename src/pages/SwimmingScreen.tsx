@@ -1,18 +1,38 @@
 import { Card, CardContent } from '@/components/ui/card'
-import { butterflyDataOverTime } from '@/constants/swimmingdata'
-import { individualMedleyDataOverTime } from '@/constants/swimmingdata'
-import HorizontalTimeline from '@/components/common/Timeline'
+import { butterflyDataOverTime } from '@/constants/swimming/swimmingdata'
+import { individualMedleyDataOverTime } from '@/constants/swimming/swimmingdata'
+import { ResponsiveTimeline } from '@/components/common/Timeline'
 import { CustomImage } from '@/components/common/CustomImage'
 import { ScootesLink } from '@/components/common/ScootesLink'
 import { SwimmingProgressionChart } from '@/components/swimming/SwimmingProgressionChart'
-import { swimmingTeams } from '@/constants/swimmingTeams'
+import { swimmingTeams } from '@/constants/swimming/swimmingTeams'
 import { PageHeader } from '@/layout/PageHeader'
 
 const SwimmingScreen = () => {
     return (
-        <div className='w-full max-w-6xl mx-auto py-8 px-4'>
+        <div className='w-full max-w-6xl mx-auto py-8'>
             <PageHeader title='From Man to Fish' />
-            <div className='space-y-6'>
+            <Card className='shadow-md border rounded-md mb-8'>
+                <CardContent className='p-6'>
+                    <div className='text-xl font-bold'>Team Timeline</div>
+                    <div className='p-8'>
+                        <ResponsiveTimeline events={swimmingTeams} />
+                    </div>
+                </CardContent>
+            </Card>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
+                <Card className='shadow-md border rounded-md'>
+                    <CardContent className='p-6'>
+                        <SwimmingProgressionChart title='200 Yard Butterfly' data={butterflyDataOverTime.swims} />
+                    </CardContent>
+                </Card>
+                <Card className='shadow-md border rounded-md'>
+                    <CardContent className='p-6'>
+                        <SwimmingProgressionChart title='400 Yard Individual Medley' data={individualMedleyDataOverTime.swims} />
+                    </CardContent>
+                </Card>
+            </div>
+            <div className='space-y-8'>
                 <div className='flex flex-col gap-8 min-h-[24rem] md:h-96 md:flex-row items-center'>
                     <div className={`w-full h-64 md:h-full md:w-1/2 order-1 md:order-2`}>
                         <CustomImage
@@ -112,26 +132,6 @@ const SwimmingScreen = () => {
                                     </ScootesLink>
                                 </div>
                             </div>
-                        </CardContent>
-                    </Card>
-                </div>
-                <Card className='shadow-md border rounded-md'>
-                    <CardContent className='p-6'>
-                        <div className='text-xl font-bold'>Team Timeline</div>
-                        <div className='p-8'>
-                            <HorizontalTimeline events={swimmingTeams} />
-                        </div>
-                    </CardContent>
-                </Card>
-                <div className='grid grid-cols-2 gap-6 '>
-                    <Card className='shadow-md border rounded-md'>
-                        <CardContent className='p-6'>
-                            <SwimmingProgressionChart title='200 Yard Butterfly' data={butterflyDataOverTime.swims} />
-                        </CardContent>
-                    </Card>
-                    <Card className='shadow-md border rounded-md'>
-                        <CardContent className='p-6'>
-                            <SwimmingProgressionChart title='400 Yard Individual Medley' data={individualMedleyDataOverTime.swims} />
                         </CardContent>
                     </Card>
                 </div>

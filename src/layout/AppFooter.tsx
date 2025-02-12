@@ -10,7 +10,7 @@ export const AppFooter = () => {
                 <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
                     {/* Copyright Section */}
                     <div className='text-sm text-muted-foreground'>
-                        © {currentYear} Zachary Cootes • tag line here •{' '}
+                        © {currentYear} Zachary Cootes • Hunger is the best sauce •{' '}
                         <ScootesLink external href='https://github.com/zcootes95/zacharys-personal-site' aria-label='Source Code'>
                             Want to learn how I built this?
                         </ScootesLink>{' '}

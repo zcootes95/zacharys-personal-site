@@ -36,18 +36,18 @@ export const AsciiGenerator = () => {
             </CardHeader>
             <CardContent className='space-y-2'>
                 {asciiArt !== '' ? (
-                    <div className='flex flex-col items-center'>
-                        <pre style={{ whiteSpace: 'pre', overflowX: 'auto' }}>
+                    <div className='space-y-1'>
+                        <pre style={{ whiteSpace: 'pre', overflowX: 'auto', fontSize: '10px' }}>
                             <CopyBlock
                                 text={asciiArt}
                                 theme={atomOneLight}
                                 language='text'
                                 codeBlock
-                                customStyle={{ fontSize: '10px' }}
+                                customStyle={{ fontSize: '10px', fontFamily: 'monospace' }}
                                 wrapLongLines={false}
                                 codeBlockStyle={{}}
                                 showLineNumbers={false}
-                                codeContainerStyle={{ lineHeight: '12px' }}
+                                codeContainerStyle={{ lineHeight: '13px' }}
                             />
                         </pre>
                     </div>

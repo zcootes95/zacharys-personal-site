@@ -1,4 +1,9 @@
-export const foxtailTechnologiesData = [
+export type TechnologyData = {
+    imagePath: string
+    name: string
+}
+
+export const foxtailTechnologiesData: TechnologyData[] = [
     { imagePath: '/projects/typescript', name: 'Typescript' },
     { imagePath: '/projects/react', name: 'React' },
     { imagePath: '/projects/react-native', name: 'React Native' },
@@ -21,7 +26,7 @@ export const foxtailTechnologiesData = [
     { imagePath: '/projects/zod', name: 'Zod' }
 ]
 
-export const pennyroyalTechnologiesData = [
+export const pennyroyalTechnologiesData: TechnologyData[] = [
     { imagePath: '/projects/typescript', name: 'Typescript' },
     { imagePath: '/projects/react', name: 'React' },
     { imagePath: '/projects/redux', name: 'Redux' },

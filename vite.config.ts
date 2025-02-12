@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
     plugins: [react()],
-    base: '/', // Since you're deploying to the root
+    base: '/',
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
