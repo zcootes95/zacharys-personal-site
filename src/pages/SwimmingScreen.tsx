@@ -12,7 +12,7 @@ import { SwimmingRow } from '@/components/swimming/SwimmingRow'
 
 const SwimmingScreen = () => {
     return (
-        <div className='w-full max-w-6xl mx-auto py-8'>
+        <div className='w-full max-w-6xl mx-auto pb-8'>
             <PageHeader title='From Man to Fish' />
             <Card className='shadow-md border rounded-md mb-8'>
                 <CardContent className='p-6'>

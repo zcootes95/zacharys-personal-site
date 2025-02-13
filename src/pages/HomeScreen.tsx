@@ -23,14 +23,6 @@ const HomeScreen = () => {
                 <CharacterBadges />
 
                 <div className='w-full p-4'>
-                    {/* <a
-                        href='/src/assets/pdf/resume.pdf'
-                        download
-                        className='w-full self-end bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 text-sm rounded mt-2 inline-block text-center'
-                    >
-                        Download Resume
-                    </a> */}
-
                     <CustomButton link='/contact' text='Contact me' />
                 </div>
             </div>
@@ -79,9 +71,7 @@ const HomeScreen = () => {
                     route='/queso'
                     routeText="Let's get Cheesy"
                     title='Queso in Austin, TX'
-                    contentText="After leaving Austin, I realized that the term queso in not universal. Most places I go to think I'm talking about a plastic-y ball park
-                        cheese that has no flavor or substance. Queso is so much more and every time I'm back in Austin I make sure to get my fill and scratch
-                        the ever hungry queso itch."
+                    contentText="After leaving Austin, I realized that the term queso is not universal. Most places I go to think I'm talking about a plastic-y ball park cheese that has no flavor or substance. Queso is so much more and every time I'm back in Austin I make sure to get my fill and scratch the ever hungry queso itch."
                 />
 
                 <HomeTopicSection

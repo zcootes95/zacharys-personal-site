@@ -39,7 +39,7 @@ export const CharacterBadges = () => {
                             <Badge
                                 key={badge}
                                 onClick={() => handleBadgeClick(badge)}
-                                className='cursor-pointer text-xs px-1 py-0.5 bg-blue-700 text-white border-2'
+                                className='cursor-pointer text-xs px-1 py-0.5 bg-[#040403] text-white border-2'
                             >
                                 {badge}
                             </Badge>

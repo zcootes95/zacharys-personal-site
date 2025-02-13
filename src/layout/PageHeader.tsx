@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChevronLeft } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 type PageHeaderProps = {
@@ -9,18 +9,16 @@ type PageHeaderProps = {
 export const PageHeader = (props: PageHeaderProps) => {
     return (
         <div className='flex flex-row items-center mb-8'>
-            <div className='text-4xl font-bold '>{props.title}</div>
-            <div className='flex-grow' />
             <div>
-                <Button asChild variant='default'>
+                <Button asChild variant='ghost' size={'icon'} className='justify-center'>
                     <Link to='/'>
                         <div className='flex flex-row items-center gap-2'>
-                            <ChevronLeft className='h-4' strokeWidth={3} />
-                            <div>Back</div>
+                            <ArrowLeft strokeWidth={3} />
                         </div>
                     </Link>
                 </Button>
             </div>
+            <div className='text-4xl font-bold '>{props.title}</div>
         </div>
     )
 }
